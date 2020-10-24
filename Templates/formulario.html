@@ -1,0 +1,164 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <div class="container">
+<div class="container">
+    <h1>Arma tu pedido</h1>
+    <form name="contacto" class="form-horizontal" onsubmit="return validateForm()"method="post">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">* Nombre completo:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="nombre" placeholder="nombre completo" name="Nombre">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="dir">* Direccion:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="dir" placeholder="Direccion" name="dir">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="phone">* Fono:</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="fono" placeholder="Fono" name="email">
+          </div>
+        </div>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="email">* Email:</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="text"> * Masa</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="masa">
+            <option>Pizza Familiar Normal</option>
+            <option>Pizza Familiar a la piedra</option>
+          </select>
+          </div>
+      </div>
+     <div class="form-group">
+          <label class="control-label col-sm-2" for="text"> * Salsa</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="salsa">
+            <option>Salsa Tomate Pomodoro</option>
+            <option>Salsa barbacoa</option>
+            <option>Crema</option>
+          </select>
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="text">* Queso</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="queso">
+            <option>Queso Chanco</option>
+            <option>Queso Mozzarella</option>
+            <option>Mix 3 quesos</option>
+          </select>
+          </div>
+      </div>
+       <div class="form-group">
+          <label class="control-label col-sm-2" for="text">* Ingrediente 1</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="sel1">
+
+            <option>Pepperoni</option>
+            <option>Carne Picada</option>
+            <option>Chorizo</option>
+            <option>Tocino</option>
+          </select>
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="text">* Ingrediente 2</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="sel2">
+            <option>Aceitunas</option>
+            <option>Champignones</option>
+            <option>Tomates de la huerta</option>
+            <option>Ruccula</option>
+            <option>Pimenton</option>
+            <option>Choclo</option>
+          </select>
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="text">* Ingrediente 3</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="sel3">
+            <option>Pimenton</option>
+            <option>Champignones</option>
+            <option>Tomates de la huerta</option>
+            <option>Ruccula</option>
+            <option>Choclo</option>
+            <option>Pepperoni</option>
+            <option>Chorizo</option>
+            <option>Tocino</option>
+            <option>Aceitunas</option>
+          </select>
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="text">Bebida</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="sel4">
+            <option>Sin bebida</option>
+            <option>Coca Cola Normal 1.5l</option>
+            <option>Coca Zero 1.5l</option>
+            <option>Fanta 1.5l</option>
+            <option>Sprite 1.5l</option>
+            <option>Pepsi 1.5l</option>
+            <option>Orange Crush 1.5l</option>
+            <option>Limon Soda 1.5l</option>
+            <option>Canada dry 1.5l</option>
+            <option>Agua Mineral Rizola 1.5l</option>
+            <option>Agua Mineral Benedictino 1.5l</option>
+            <option>Nectar Watt's Naranja 1.5l</option>
+            <option>Nectar Watt's Piña 1.5l</option>
+            <option>Nectar Watt's Durazno 1.5l</option>
+            <option>Cerveza Escudo 1l</option>
+            <option>Cerveza Becker 1l</option>
+            <option>Cerveza Baltica 1l</option>
+            <option>Cerveza Cristal 1l</option>
+          </select>
+          </div>
+      </div>
+       <div class="form-group">
+          <label class="control-label col-sm-2" for="text">Merken/Aji</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="sel5">
+            <option>No</option>
+            <option>Merken</option>
+            <option>Aji en cacho picado</option>
+            <option>Merken/aji en cacho</option>
+          </select>
+          </div>
+      </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="text">Observaciones:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="obs" placeholder="Mensaje" name="obs">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="text"> * Datos obligatorios</label>
+          <div class="col-sm-10">
+        </div>
+
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default" id="btnEnviar">Enviar</button>
+          </div>
+        </div>
+
+
+          <div class="col-sm-offset-2 col-sm-10">
+          </div>
+        </div>
+      </form>
+    </div>
+
+{%  endblock %}
