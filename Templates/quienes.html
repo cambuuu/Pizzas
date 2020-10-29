@@ -1,10 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <div class="col-md-6">
+                    <img id="fotoamasando" src="{% static 'app/img/q1.jpg' %}" alt="fondo">
+                </div>
+                  <div class="col-md-6">
+                        <h4 id="txtdescr">Yummy Pizza's es una microempresa familiar ubicada en San Felipe, V región, creada a raíz de la pandemia, con la finalidad de entregar a sus clientes una pizza artesanal de excelente calidad, facilitando así a sus clientes una gran variedad en pizzas.
+                        Debido a la situación actual, contamos solamente con el servicio de Delivery y retiro en loca, aunque está planificado el poder abrir nuestras sucursales una vez que la situación lo permita.
+                        <br></br>
+                        Pueden encontrarnos en nuestro <a href="https://www.instagram.com/yummy.pizzas/" target="_blank">Instagram</a>, para consultas y/o agendar pedidos.
 
-</body>
-</html>
+                      </h4>
+                  </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <footer id="footer">
+        <p>2020 &copy; Yummy Pizza's. Todos los derechos reservados</p>
+    </footer>
+{% endblock %}

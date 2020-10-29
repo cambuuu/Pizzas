@@ -1,0 +1,25 @@
+{%  extends 'index.html' %}
+{%  load crispy_forms_tags %}
+{%  block content %}
+
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            Ha ocurrido un error, vuelva a intentar nuevamente
+        </div>
+    {% endif %}
+
+    <h1>Armado de Pizzas</h1>
+
+    <form action="{% url 'guardarPedido' %}" method="POST">
+
+    {% csrf_token %}
+    {% if mensaje %}
+        <div class="alert alert-success" role="alert">
+            Pedido agregado exitosamente!
+        </div>
+    {% endif %}
+
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary">Confirmar</button>
+    </form>
+{%  endblock %}

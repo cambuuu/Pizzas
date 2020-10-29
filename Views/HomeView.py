@@ -17,3 +17,13 @@ class HomeView():
     def formulario(self):
         plantilla = get_template('formulario.html')
         return HttpResponse(plantilla.render())
+
+    def quienes (self):
+        plantilla = get_template('quienes.html')
+        return HttpResponse(plantilla.render())
+    def catalogo(self):
+        plantilla = get_template('catalogo.html')
+        return HttpResponse(plantilla.render())
+    def contacto(self):
+        plantilla = get_template('contacto.html')
+        return HttpResponse(plantilla.render())
