@@ -1,5 +1,8 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 from django.template.loader import get_template
+
+from Models.TipoPizza.forms import ContactoForm
 
 
 class HomeView():
@@ -24,6 +27,15 @@ class HomeView():
     def catalogo(self):
         plantilla = get_template('catalogo.html')
         return HttpResponse(plantilla.render())
-    def contacto(self):
-        plantilla = get_template('contacto.html')
-        return HttpResponse(plantilla.render())
+    def contacto(request):
+        data = {
+            'form': ContactoForm()
+        }
+        if request.method == 'POST':
+            formulario = ContactoForm(data=request.POST)
+            if formulario.is_valid():
+                formulario.save()
+                data["mensaje"] = "Contacto guardado"
+            else:
+                data["form"] = formulario
+        return render(request,'contacto.html', data)

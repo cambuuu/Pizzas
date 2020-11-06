@@ -1,6 +1,25 @@
  
 
+.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: #F18B24;
+      font-family:Verdana;
+      font-size: 18px;
+      border-color: #F18B24;
+      text-align: center;
 
+    }
+    .navbar-brand{
+
+      font-size: 18px;
+    }
+
+
+    .navbar{
+
+      font-size: 18px;
+    }
 
  /* Remove the navbar's default margin-bottom and rounded borders */ 
 
@@ -19,6 +38,10 @@
 
   }
 
+.formulario_contacto {
+    width: 500px;
+    margin-top:50px;
+}
 
 
 
@@ -105,7 +128,6 @@ georgia,garamond,serif;font-size:16px;font-style:italic;
   width: 100%;
   transition: .5s ease;
   opacity:0;
-  color: white;
   font-size: 20px;
   padding: 20px;
   text-align: center;

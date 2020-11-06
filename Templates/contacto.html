@@ -1,118 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <title> Contacto </title>
 <div class="container">
   <h2>Contacto</h2>
-  <form name="contacto" class="form-horizontal" onsubmit="return validateForm()"method="post">
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="email">* Nombre completo:</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="nombre" placeholder="nombre completo" name="Nombre">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="dir">* Direccion:</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="dir" placeholder="Direccion" name="dir">
-      </div>
-    </div>
+  <form action="" name ="contacto" class="formulario_contacto" method="post">
 
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="phone">* Fono:</label>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="fono" placeholder="Fono" name="email">
-      </div>
-    </div>
-
-    <div class="form-group">
-	  	<label class="control-label col-sm-2" for="text">* Motivo contacto:</label>
-  		<div class="col-sm-10">
-  			<select class="form-control" id="sel1">
-
-    		<option>Producto</option>
-    		<option>Pedido</option>
-    		<option>Felicitaciones</option>
-    		<option>Reclamos</option>
-  		</select>
-  		</div>
-	</div>
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="email">* Email:</label>
-      <div class="col-sm-10">
-        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="email">* Mensaje:</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="mensaje" placeholder="Mensaje" name="mensaje">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="text"> * Datos obligatorios</label>
-      <div class="col-sm-10">
-    </div>
-
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
+      {% csrf_token %}
+      {{ form }}
+      <br>
         <button type="submit" class="btn btn-default" id="btnEnviar">Enviar</button>
-      </div>
-    </div>
-
-    <div class="form-group">
-
-      <div class="col-sm-offset-2 col-sm-10">
-      </div>
-    </div>
   </form>
+{{ mensaje }}
 </div>
     <br><br><br>
     <footer id="footer">
         <p>2020 &copy; Yummy Pizza's. Todos los derechos reservados</p>
     </footer>
-
-<script type="text/javascript">
-
-function validateForm() {
-
-  var btnEnviar = document.getElementById("btnEnviar");
-
-  var nombre = document.forms["contacto"]["nombre"].value;
-  if (nombre == "") {
-    alert("Complete los campos necesarios");
-    return false;
-  }
-
-  var dir = document.forms["contacto"]["dir"].value;
-  if (dir == "") {
-    alert("Complete los campos necesarios");
-    return false;
-  }
-
-  var fono = document.forms["contacto"]["fono"].value;
-  if (fono <= 0) {
-    alert("Complete los campos necesarios");
-    return false;
-  }
-
-
-
-  var msj = document.forms["contacto"]["mensaje"].value;
-  if (msj == "") {
-    alert("Complete los campos necesarios");
-    return false;
-  }
-  else{
-		alert("Datos Enviados");
-
-
-  }
-}
-
-
-
-
-</script>
-
 
 {% endblock %}

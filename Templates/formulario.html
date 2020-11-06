@@ -6,6 +6,7 @@
 <div class="container">
     <h1>Arma tu pedido</h1>
     <form name="contacto" class="form-horizontal" onsubmit="return validateForm()"method="post">
+        {% csrf_token %}
         <div class="form-group">
           <label class="control-label col-sm-2" for="email">* Nombre completo:</label>
           <div class="col-sm-10">
